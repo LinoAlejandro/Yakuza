@@ -1,0 +1,82 @@
+﻿@model Yakuza.Models.Usuario
+
+@{
+    ViewBag.Title = "ShowData";
+}
+
+<h2>ShowData</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nickNameUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nickNameUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidoPaternoUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidoPaternoUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidoMaternoUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidoMaternoUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaNacimientoUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaNacimientoUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correoUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correoUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.passwordUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.passwordUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdUsuario }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

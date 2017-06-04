@@ -1,0 +1,26 @@
+﻿@model Yakuza.Models.TipoDeTarjeta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TipoDeTarjeta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionTipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionTipo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idTipo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
