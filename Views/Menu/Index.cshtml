@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Yakuza.Models.Platillo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<link rel="stylesheet" href="~/Content/MenuIndexStyle.css" />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div class="row">
+        
+        @foreach (var item in Model)
+        {
+            <div class="col-md-offset-2 col-md-3 well contenedor">
+                <img class="img-responsive img-rounded" src="@item.imagenPlatillo" />
+                <hr />
+                <div class="h2" style="font-family:Roboto">@Html.ActionLink(item.nombrePlatillo, "Show", new { idPlatillo = item.idPlatillo })</div>
+                <hr />
+                <div class="h6" style="font-family:Roboto">@item.descripcionPlatillo</div>
+                <hr />
+            </div>
+        }
+    </div>

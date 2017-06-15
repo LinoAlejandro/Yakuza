@@ -4,46 +4,48 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fffd0dce0d4f4c0a9ff0ca5e66aa064c" Name="Diagram1" ZoomLevel="81">
-        <EntityTypeShape EntityType="YakuzaDBModel.AspNetUsers" Width="1.5" PointX="4.5" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="YakuzaDBModel.Calificacion" Width="1.5" PointX="8.25" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="YakuzaDBModel.Carrito" Width="1.5" PointX="8.25" PointY="10.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="YakuzaDBModel.CatalogoCarrito" Width="1.5" PointX="10.5" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="YakuzaDBModel.CategoriaPlatillo" Width="1.5" PointX="3.75" PointY="11" IsExpanded="true" />
-        <EntityTypeShape EntityType="YakuzaDBModel.Comentario" Width="1.5" PointX="10.5" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="YakuzaDBModel.Consumidor" Width="1.5" PointX="11.25" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="YakuzaDBModel.Direccion" Width="1.5" PointX="0.75" PointY="6.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="YakuzaDBModel.Membresia" Width="1.5" PointX="9" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="YakuzaDBModel.Pais" Width="1.5" PointX="3.75" PointY="13.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="YakuzaDBModel.Platillo" Width="1.5" PointX="6" PointY="11.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="YakuzaDBModel.Precio" Width="1.5" PointX="8.25" PointY="13.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="YakuzaDBModel.Sucursal" Width="1.5" PointX="3" PointY="7.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="YakuzaDBModel.Tarjeta" Width="1.5" PointX="9" PointY="16.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="YakuzaDBModel.TipoDeTarjeta" Width="1.5" PointX="6.75" PointY="16.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="YakuzaDBModel.Usuario" Width="1.5" PointX="6" PointY="6.25" IsExpanded="true" />
-        <AssociationConnector Association="YakuzaDBModel.FK__Usuario__Id__46E78A0C" ManuallyRouted="false" />
-        <AssociationConnector Association="YakuzaDBModel.FK__Calificac__idPla__3B75D760" ManuallyRouted="false" />
-        <AssociationConnector Association="YakuzaDBModel.FK__Calificac__IdUsu__38996AB5" ManuallyRouted="false" />
-        <AssociationConnector Association="YakuzaDBModel.FK__Comentari__idCal__4316F928" ManuallyRouted="false" />
-        <AssociationConnector Association="YakuzaDBModel.FK__Carrito__IdUsuar__37A5467C" ManuallyRouted="false" />
-        <AssociationConnector Association="YakuzaDBModel.FK__CatalogoC__idCar__4222D4EF" ManuallyRouted="false" />
-        <AssociationConnector Association="YakuzaDBModel.FK__CatalogoC__idPla__3C69FB99" ManuallyRouted="false" />
-        <AssociationConnector Association="YakuzaDBModel.FK__Consumido__idMem__45F365D3" ManuallyRouted="false" />
-        <AssociationConnector Association="YakuzaDBModel.FK__Consumido__idTar__440B1D61" ManuallyRouted="false" />
-        <AssociationConnector Association="YakuzaDBModel.FK__Consumido__IdUsu__36B12243" ManuallyRouted="false" />
-        <AssociationConnector Association="YakuzaDBModel.FK__Platillo__idPais__403A8C7D" ManuallyRouted="false" />
-        <AssociationConnector Association="YakuzaDBModel.FK__Precio__idPlatil__3D5E1FD2" ManuallyRouted="false" />
-        <AssociationConnector Association="YakuzaDBModel.FK__Tarjeta__idTipo__44FF419A" ManuallyRouted="false" />
+      <Diagram DiagramId="1d35793074db4fdca58a0604618f5f75" Name="Diagram1">
+        <EntityTypeShape EntityType="YakuzaDBModel.C__MigrationHistory" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.AspNetRoles" Width="1.5" PointX="1.5" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.AspNetUserClaims" Width="1.5" PointX="3" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.AspNetUserLogins" Width="1.5" PointX="3" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.AspNetUsers" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.Calificacion" Width="1.5" PointX="5.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.Carrito" Width="1.5" PointX="6" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.CatalogoCarrito" Width="1.5" PointX="8.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.CategoriaPlatillo" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.Comentario" Width="1.5" PointX="8.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.Consumidor" Width="1.5" PointX="8.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.Direccion" Width="1.5" PointX="10.5" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.Membresia" Width="1.5" PointX="6" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.Pais" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.Platillo" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.Precio" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.Sucursal" Width="1.5" PointX="12.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.Tarjeta" Width="1.5" PointX="6" PointY="21.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.TipoDeTarjeta" Width="1.5" PointX="3.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="YakuzaDBModel.Usuario" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <AssociationConnector Association="YakuzaDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.FK__Usuario__Id__0A9D95DB" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.FK__Calificac__idPla__7E37BEF6" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.FK__Calificac__IdUsu__7B5B524B" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.FK__Comentari__idCal__05D8E0BE" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.FK__Carrito__IdUsuar__7A672E12" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.FK__CatalogoC__idCar__04E4BC85" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.FK__CatalogoC__idPla__7F2BE32F" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.FK__Consumido__idMem__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.FK__Consumido__idTar__06CD04F7" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.FK__Consumido__IdUsu__797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.FK__Platillo__idPais__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.FK__Precio__idPlatil__00200768" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.FK__Tarjeta__idTipo__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.AspNetUserRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="YakuzaDBModel.ConsumidorHasDireccion" ManuallyRouted="false" />
         <AssociationConnector Association="YakuzaDBModel.PlatilloHasCategoria" ManuallyRouted="false" />
         <AssociationConnector Association="YakuzaDBModel.SucursalHasDireccion" ManuallyRouted="false" />
-        <AssociationConnector Association="YakuzaDBModel.UsuarioHasDireccion" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="YakuzaDBModel.C__MigrationHistory" Width="2.25" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="YakuzaDBModel.AspNetRoles" Width="2.25" PointX="1.875" PointY="3.625" />
-        <EntityTypeShape EntityType="YakuzaDBModel.AspNetUserClaims" Width="2.25" PointX="6.375" PointY="2.125" />
-        <EntityTypeShape EntityType="YakuzaDBModel.AspNetUserLogins" Width="2.25" PointX="6.375" PointY="19.875" />
-        <AssociationConnector Association="YakuzaDBModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
-        <AssociationConnector Association="YakuzaDBModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
-        <AssociationConnector Association="YakuzaDBModel.AspNetUserRoles" />
+        <EntityTypeShape EntityType="YakuzaDBModel.Tag" Width="1.5" PointX="5.25" PointY="7.625" />
+        <AssociationConnector Association="YakuzaDBModel.FK_Tag_Platillo" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

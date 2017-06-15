@@ -14,13 +14,21 @@ namespace Yakuza.Models
     
     public partial class Consumidor
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Consumidor()
+        {
+            this.Direccion = new HashSet<Direccion>();
+        }
+    
         public int idConsumidor { get; set; }
-        public int idMembresia { get; set; }
-        public int idTarjeta { get; set; }
-        public int IdUsuario { get; set; }
+        public Nullable<int> idMembresia { get; set; }
+        public Nullable<int> idTarjeta { get; set; }
+        public Nullable<int> IdUsuario { get; set; }
     
         public virtual Membresia Membresia { get; set; }
         public virtual Tarjeta Tarjeta { get; set; }
         public virtual Usuario Usuario { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Direccion> Direccion { get; set; }
     }
 }

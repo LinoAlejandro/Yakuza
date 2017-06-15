@@ -21,6 +21,7 @@ namespace Yakuza.Models
             this.CatalogoCarrito = new HashSet<CatalogoCarrito>();
             this.Precio = new HashSet<Precio>();
             this.CategoriaPlatillo = new HashSet<CategoriaPlatillo>();
+            this.Tag = new HashSet<Tag>();
         }
     
         public int idPlatillo { get; set; }
@@ -29,6 +30,7 @@ namespace Yakuza.Models
         public double calificacionPlatillo { get; set; }
         public int numeroVisitas { get; set; }
         public int idPais { get; set; }
+        public string imagenPlatillo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Calificacion> Calificacion { get; set; }
@@ -39,5 +41,7 @@ namespace Yakuza.Models
         public virtual ICollection<Precio> Precio { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CategoriaPlatillo> CategoriaPlatillo { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tag> Tag { get; set; }
     }
 }

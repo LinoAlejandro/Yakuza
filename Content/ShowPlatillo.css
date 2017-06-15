@@ -1,0 +1,19 @@
+﻿
+img{
+    -webkit-box-shadow: -10px 10px 2px 0px rgba(0,0,0,0.4);
+}
+
+.nombrePlatillo {
+    font-family:DomoAregato;
+    color: #ffffff;
+}
+
+.information{
+    margin-top: 10px;
+    background-color: rgba(155,13,32,.6);
+    color: white;
+    font-family: Roboto;
+    font-size: 2em; 
+    padding-right: 150px;
+    padding-left: 150px;
+}

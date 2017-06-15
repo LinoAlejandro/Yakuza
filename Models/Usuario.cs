@@ -20,7 +20,6 @@ namespace Yakuza.Models
             this.Calificacion = new HashSet<Calificacion>();
             this.Carrito = new HashSet<Carrito>();
             this.Consumidor = new HashSet<Consumidor>();
-            this.Direccion = new HashSet<Direccion>();
         }
     
         public int IdUsuario { get; set; }
@@ -28,7 +27,7 @@ namespace Yakuza.Models
         public string nombreUsuario { get; set; }
         public string apellidoPaternoUsuario { get; set; }
         public string apellidoMaternoUsuario { get; set; }
-        public Nullable<System.DateTime> fechaNacimientoUsuario { get; set; }
+        public System.DateTime fechaNacimientoUsuario { get; set; }
         public string correoUsuario { get; set; }
         public string passwordUsuario { get; set; }
         public string Id { get; set; }
@@ -40,7 +39,5 @@ namespace Yakuza.Models
         public virtual ICollection<Carrito> Carrito { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Consumidor> Consumidor { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Direccion> Direccion { get; set; }
     }
 }

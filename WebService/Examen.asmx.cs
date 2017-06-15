@@ -29,7 +29,7 @@ namespace Yakuza.WebService
         [WebMethod]
         public string compararCadenas(string nombre1, string nombre2)
         {
-            YakuzaEntities db = new YakuzaEntities();
+            YakuzaDBEntities db = new YakuzaDBEntities();
             List<TipoDeTarjeta> tarjetas = db.TipoDeTarjeta.ToList<TipoDeTarjeta>();
             foreach (TipoDeTarjeta tarjeta in tarjetas)
             {
@@ -52,7 +52,7 @@ namespace Yakuza.WebService
         [WebMethod]
         public List<string> showTipoDeTarjetas()
         {
-            YakuzaEntities db = new YakuzaEntities();
+            YakuzaDBEntities db = new YakuzaDBEntities();
             List<TipoDeTarjeta> tarjetas = db.TipoDeTarjeta.ToList();
             List<string> tarjetasString = new List<string>();
             foreach (TipoDeTarjeta tipo in tarjetas)

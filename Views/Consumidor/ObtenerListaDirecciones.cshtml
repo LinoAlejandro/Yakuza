@@ -1,0 +1,51 @@
+﻿@using Yakuza.Models
+@model IEnumerable<Direccion>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                Municipio
+            </th>
+            <th>
+                Colonia
+            </th>
+            <th>
+                Calle
+            </th>
+            <th>
+                Número exterior
+            </th>
+            <th>
+                Número interior
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.municipioDireccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.coloniaDireccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.calleDireccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.numeroExterior)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.numeroInterior)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.idDireccion }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.idDireccion })
+                </td>
+            </tr>
+        }
+    </table>

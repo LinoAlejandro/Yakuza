@@ -1,0 +1,66 @@
+﻿@model Yakuza.Models.Platillo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Platillo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombrePlatillo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombrePlatillo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionPlatillo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionPlatillo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.calificacionPlatillo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.calificacionPlatillo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numeroVisitas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numeroVisitas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imagenPlatillo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imagenPlatillo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pais.nombrePais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pais.nombrePais)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idPlatillo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

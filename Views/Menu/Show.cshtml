@@ -1,0 +1,30 @@
+﻿@model Yakuza.Models.Platillo
+
+@{
+    ViewBag.Title = "Detalles";
+}
+
+<link rel="stylesheet" href="../Content/ShowPlatillo.css" />
+
+<div class="Container">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <center>
+        <div class="nombrePlatillo" style="font-size: 5em"> @Model.nombrePlatillo </div>
+        <div class="nombrePlatillo" style="font-size: 2.2em">Visitas: @Model.numeroVisitas </div>
+    </center>
+    <br />
+    <br />
+    <center>
+        <div>
+            <img class="img-rounded img-responsive" src="@Model.imagenPlatillo" />
+        </div>
+        <div class="information">
+            @Model.descripcionPlatillo
+        </div>
+    </center>
+</div>

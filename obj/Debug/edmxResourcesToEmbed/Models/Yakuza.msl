@@ -1,6 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="YakuzaDBModelStoreContainer" CdmEntityContainer="YakuzaEntities">
+  <EntityContainerMapping StorageEntityContainer="YakuzaDBModelStoreContainer" CdmEntityContainer="YakuzaDBEntities">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="YakuzaDBModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="YakuzaDBModel.AspNetRoles">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="YakuzaDBModel.AspNetUserClaims">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="YakuzaDBModel.AspNetUserLogins">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="AspNetUsers">
       <EntityTypeMapping TypeName="YakuzaDBModel.AspNetUsers">
         <MappingFragment StoreEntitySet="AspNetUsers">
@@ -111,6 +148,7 @@
     <EntitySetMapping Name="Platillo">
       <EntityTypeMapping TypeName="YakuzaDBModel.Platillo">
         <MappingFragment StoreEntitySet="Platillo">
+          <ScalarProperty Name="imagenPlatillo" ColumnName="imagenPlatillo" />
           <ScalarProperty Name="idPlatillo" ColumnName="idPlatillo" />
           <ScalarProperty Name="nombrePlatillo" ColumnName="nombrePlatillo" />
           <ScalarProperty Name="descripcionPlatillo" ColumnName="descripcionPlatillo" />
@@ -171,6 +209,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="YakuzaDBModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetRoles">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+      <EndProperty Name="AspNetUsers">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ConsumidorHasDireccion" TypeName="YakuzaDBModel.ConsumidorHasDireccion" StoreEntitySet="ConsumidorHasDireccion">
+      <EndProperty Name="Consumidor">
+        <ScalarProperty Name="idConsumidor" ColumnName="idConsumidor" />
+      </EndProperty>
+      <EndProperty Name="Direccion">
+        <ScalarProperty Name="idDireccion" ColumnName="idDireccion" />
+      </EndProperty>
+    </AssociationSetMapping>
     <AssociationSetMapping Name="PlatilloHasCategoria" TypeName="YakuzaDBModel.PlatilloHasCategoria" StoreEntitySet="PlatilloHasCategoria">
       <EndProperty Name="CategoriaPlatillo">
         <ScalarProperty Name="idCategoriaPlatillo" ColumnName="idCategoriaPlatillo" />
@@ -187,58 +241,14 @@
         <ScalarProperty Name="idSucursal" ColumnName="idSucursal" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="UsuarioHasDireccion" TypeName="YakuzaDBModel.UsuarioHasDireccion" StoreEntitySet="UsuarioHasDireccion">
-      <EndProperty Name="Direccion">
-        <ScalarProperty Name="idDireccion" ColumnName="idDireccion" />
-      </EndProperty>
-      <EndProperty Name="Usuario">
-        <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <EntitySetMapping Name="C__MigrationHistory">
-      <EntityTypeMapping TypeName="YakuzaDBModel.C__MigrationHistory">
-        <MappingFragment StoreEntitySet="__MigrationHistory">
-          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
-          <ScalarProperty Name="Model" ColumnName="Model" />
-          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
-          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+    <EntitySetMapping Name="Tag">
+      <EntityTypeMapping TypeName="YakuzaDBModel.Tag">
+        <MappingFragment StoreEntitySet="Tag">
+          <ScalarProperty Name="IdPlatillo" ColumnName="IdPlatillo" />
+          <ScalarProperty Name="descripcionTag" ColumnName="descripcionTag" />
+          <ScalarProperty Name="IdTag" ColumnName="IdTag" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="AspNetRoles">
-      <EntityTypeMapping TypeName="YakuzaDBModel.AspNetRoles">
-        <MappingFragment StoreEntitySet="AspNetRoles">
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="AspNetUserClaims">
-      <EntityTypeMapping TypeName="YakuzaDBModel.AspNetUserClaims">
-        <MappingFragment StoreEntitySet="AspNetUserClaims">
-          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
-          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="AspNetUserLogins">
-      <EntityTypeMapping TypeName="YakuzaDBModel.AspNetUserLogins">
-        <MappingFragment StoreEntitySet="AspNetUserLogins">
-          <ScalarProperty Name="UserId" ColumnName="UserId" />
-          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
-          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <AssociationSetMapping Name="AspNetUserRoles" TypeName="YakuzaDBModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
-      <EndProperty Name="AspNetUsers">
-        <ScalarProperty Name="Id" ColumnName="UserId" />
-      </EndProperty>
-      <EndProperty Name="AspNetRoles">
-        <ScalarProperty Name="Id" ColumnName="RoleId" />
-      </EndProperty>
-    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -12,7 +12,7 @@ namespace Yakuza.Controllers
 {
     public class TipoDeTarjetasController : Controller
     {
-        private YakuzaEntities db = new YakuzaEntities();
+        private YakuzaDBEntities db = new YakuzaDBEntities();
 
         // GET: TipoDeTarjetas
         public ActionResult Index()

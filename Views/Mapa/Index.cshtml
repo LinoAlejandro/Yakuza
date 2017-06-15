@@ -1,0 +1,48 @@
+﻿@using Yakuza.Models
+@model List<Direccion>
+
+@{
+    ViewBag.Title = "Direcciones";
+}
+
+<link rel="stylesheet" href="../Content/Mapa.css"/>
+<div class="row">
+    <div class="col-xs-12 ">
+        <br />
+        <br />
+        <br />
+        <br />
+        <h2 class="page-header direcciones">Direcciones</h2>
+       
+            <table class="table tabla well">
+                <tr>
+                    <th>
+                        Dirección
+                    </th>
+                    <th>
+                        Acciones
+                    </th>
+                </tr>
+                @foreach (Direccion d in Model)
+                {
+                    <tr>
+                        <td>
+                            Sucursal @d.coloniaDireccion
+                        </td>
+                        <td>
+                            @Ajax.ActionLink("Mostrar mapa", "MapaParcial", "Mapa", new { lat = d.latitudDirecicon, lng = d.longitudDireccion }, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "divMapa" })
+                        </td>
+                    </tr>
+                }
+            </table>                
+    </div>
+
+    <div class="col-xs-12">
+        <h2 class="page-header header">Ubicacion</h2>
+
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBosm5YSmCWuTxoAYG2GGSFF3yLamdXNJE"></script>
+
+        <div id="divMapa"></div>
+    </div>
+</div>
+

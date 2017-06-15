@@ -1,0 +1,28 @@
+﻿body {
+    background-image: url("../Media/BackGround.gif");
+    background-size: cover;
+}
+
+.img-logo-div{
+    position: fixed;
+    left: 40.5vw;
+    bottom: 0vh;
+}
+
+.menu{
+    font-family: DomoAregato;
+    font-size: 2em;
+    color: #6c131e; 
+    background-color: #b0aa90;
+    -webkit-box-shadow: -10px 10px 10px 1px rgba(0,0,0,0.4);
+    -webkit-transform: rotate(0deg) scale(1) skew(-20deg) translate(0px);
+}
+
+a{
+    color :#6c131e;
+}
+
+#img-logo {
+    height: 250px;
+    width: 250px;
+}

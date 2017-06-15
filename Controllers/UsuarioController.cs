@@ -12,7 +12,7 @@ namespace Yakuza.Controllers
     public class UsuarioController : Controller
     {
         // GET: Usuario
-        YakuzaEntities db = new YakuzaEntities();
+        YakuzaDBEntities db = new YakuzaDBEntities();
 
         [HttpGet]
         public ActionResult Index()
@@ -20,7 +20,14 @@ namespace Yakuza.Controllers
             return View();
         }
 
-        public ActionResult ShowData(Usuario usuario)
+        [HttpGet]
+        public ActionResult AddData()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddData(Consumidor consumidor)
         {
             return View();
         }

@@ -1,0 +1,9 @@
+﻿.contenedor {
+    -webkit-box-shadow: -10px 10px 2px 0px rgba(0,0,0,0.36);
+}
+a{
+    color: white;
+}
+.row div a {
+    color: #424242;
+}

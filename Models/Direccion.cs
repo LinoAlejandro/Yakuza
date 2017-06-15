@@ -17,8 +17,8 @@ namespace Yakuza.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Direccion()
         {
+            this.Consumidor = new HashSet<Consumidor>();
             this.Sucursal = new HashSet<Sucursal>();
-            this.Usuario = new HashSet<Usuario>();
         }
     
         public int idDireccion { get; set; }
@@ -31,8 +31,8 @@ namespace Yakuza.Models
         public string longitudDireccion { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Sucursal> Sucursal { get; set; }
+        public virtual ICollection<Consumidor> Consumidor { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Usuario> Usuario { get; set; }
+        public virtual ICollection<Sucursal> Sucursal { get; set; }
     }
 }

@@ -1,0 +1,21 @@
+﻿body {
+    background-color: #555555;
+    background-image: url("../Media/BackGround.gif");
+    background-size: cover;
+}
+
+a {
+    color: white;
+}
+
+.barra{
+    background-color: #ce162e;
+    color: white;
+    font-family: 'Roboto Thin';
+    font-size : 2.5em;
+    -webkit-box-shadow: -20px 20px 5px 0px rgba(0,0,0,0.4);
+}
+
+.text{
+    color: #383838;
+}

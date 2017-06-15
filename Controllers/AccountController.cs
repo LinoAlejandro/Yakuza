@@ -160,7 +160,7 @@ namespace Yakuza.Controllers
                     {
                         await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
-                        YakuzaEntities db = new YakuzaEntities();
+                        YakuzaDBEntities db = new YakuzaDBEntities();
                         AspNetUsers aspUser = db.AspNetUsers.First(d => d.Email == model.Email);
 
                         Usuario usuario = new Usuario();
@@ -173,8 +173,7 @@ namespace Yakuza.Controllers
                         usuario.correoUsuario = model.Email;
                         usuario.Id = aspUser.Id;
 
-                        db.Usuario.Add(usuario);
-                        db.SaveChanges();
+                        UsuariosUtilerias.createUsuario(usuario);
 
                         return RedirectToAction("Index", "Home");
                     }

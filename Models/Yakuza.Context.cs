@@ -13,10 +13,10 @@ namespace Yakuza.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class YakuzaEntities : DbContext
+    public partial class YakuzaDBEntities : DbContext
     {
-        public YakuzaEntities()
-            : base("name=YakuzaEntities")
+        public YakuzaDBEntities()
+            : base("name=YakuzaDBEntities")
         {
         }
     
@@ -25,6 +25,10 @@ namespace Yakuza.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUsers> AspNetUsers { get; set; }
         public virtual DbSet<Calificacion> Calificacion { get; set; }
         public virtual DbSet<Carrito> Carrito { get; set; }
@@ -41,9 +45,6 @@ namespace Yakuza.Models
         public virtual DbSet<Tarjeta> Tarjeta { get; set; }
         public virtual DbSet<TipoDeTarjeta> TipoDeTarjeta { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
-        public virtual DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
-        public virtual DbSet<AspNetRoles> AspNetRoles { get; set; }
-        public virtual DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
-        public virtual DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
+        public virtual DbSet<Tag> Tag { get; set; }
     }
 }

@@ -1,0 +1,38 @@
+﻿@model Yakuza.Models.ServicioModel
+
+@{
+    ViewBag.Title = "Resultado";
+}
+
+<h2>Resultado</h2>
+
+<div>
+    <h4>ServicioModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.parametro1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.parametro1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.parametro2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.parametro2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.resultado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.resultado)
+        </dd>
+
+    </dl>
+</div>

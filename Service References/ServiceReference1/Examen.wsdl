@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="compararCadenas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nombre1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre2" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="compararCadenasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="compararCadenasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="showTipoDeTarjetas">
+        <s:complexType />
+      </s:element>
+      <s:element name="showTipoDeTarjetasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="showTipoDeTarjetasResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="compararCadenasSoapIn">
+    <wsdl:part name="parameters" element="tns:compararCadenas" />
+  </wsdl:message>
+  <wsdl:message name="compararCadenasSoapOut">
+    <wsdl:part name="parameters" element="tns:compararCadenasResponse" />
+  </wsdl:message>
+  <wsdl:message name="showTipoDeTarjetasSoapIn">
+    <wsdl:part name="parameters" element="tns:showTipoDeTarjetas" />
+  </wsdl:message>
+  <wsdl:message name="showTipoDeTarjetasSoapOut">
+    <wsdl:part name="parameters" element="tns:showTipoDeTarjetasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ExamenSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="compararCadenas">
+      <wsdl:input message="tns:compararCadenasSoapIn" />
+      <wsdl:output message="tns:compararCadenasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="showTipoDeTarjetas">
+      <wsdl:input message="tns:showTipoDeTarjetasSoapIn" />
+      <wsdl:output message="tns:showTipoDeTarjetasSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ExamenSoap" type="tns:ExamenSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="compararCadenas">
+      <soap:operation soapAction="http://tempuri.org/compararCadenas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showTipoDeTarjetas">
+      <soap:operation soapAction="http://tempuri.org/showTipoDeTarjetas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ExamenSoap12" type="tns:ExamenSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="compararCadenas">
+      <soap12:operation soapAction="http://tempuri.org/compararCadenas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="showTipoDeTarjetas">
+      <soap12:operation soapAction="http://tempuri.org/showTipoDeTarjetas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Examen">
+    <wsdl:port name="ExamenSoap" binding="tns:ExamenSoap">
+      <soap:address location="http://localhost/Yakuza/WebService/Examen.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ExamenSoap12" binding="tns:ExamenSoap12">
+      <soap12:address location="http://localhost/Yakuza/WebService/Examen.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
