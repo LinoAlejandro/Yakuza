@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Yakuza.Models.Precio>
+
+@{
+    ViewBag.Title = "Index";
+}
+<br /><br /><br /><br /><br /><br />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class=well>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.descripcionPrecio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cantidadPrecio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Platillo.nombrePlatillo)
+            </th>
+            <th></th>
+        </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.descripcionPrecio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cantidadPrecio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Platillo.nombrePlatillo)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.idPrecio }) |
+                @Html.ActionLink("Details", "Details", new { id=item.idPrecio }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.idPrecio })
+            </td>
+        </tr>
+    }
+
+    </table>
+</div>

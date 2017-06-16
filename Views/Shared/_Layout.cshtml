@@ -22,7 +22,13 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="~/Menu/Index">Menú</a></li>
+                    <li>@Html.ActionLink("Platillos", "Index", "Platilloes")</li>
+                    <li>@Html.ActionLink("Tags", "Index", "Tag")</li>
+                    <li>@Html.ActionLink("SucursalCRUD", "Index", "Direcions")</li>
+                    <li>@Html.ActionLink("Pais", "Index", "Pais")</li>
+                    <li>@Html.ActionLink("Precios", "Index", "Precios")</li>
+                    <li>@Html.ActionLink("MaestroDetallePlatillo", "Index", "MaestroDetallePlatillo")</li>
+                    <li>@Html.ActionLink("Menu", "Menú", "Index")</li>
                     <li>@Html.ActionLink("Ubicaciones", "Index", "Mapa")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")

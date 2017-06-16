@@ -1,0 +1,34 @@
+﻿@model Yakuza.Models.CategoriaPlatillo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CategoriaPlatillo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreCategoriaPlatillo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreCategoriaPlatillo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionCategoriaPlatillo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionCategoriaPlatillo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idCategoriaPlatillo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

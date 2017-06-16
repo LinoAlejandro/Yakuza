@@ -4,28 +4,23 @@
     ViewBag.Title = "Index";
 }
 
-<br /><br /><br /><br /><br />
-<div class="well">
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
+<h2>Index</h2>
 
+<br /><br /><br /><br /><br /><br /><br />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="container well">
     <table class="table">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.nombrePlatillo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.descripcionPlatillo)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.calificacionPlatillo)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.numeroVisitas)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.imagenPlatillo)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Pais.nombrePais)
@@ -40,27 +35,23 @@
                     @Html.DisplayFor(modelItem => item.nombrePlatillo)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.descripcionPlatillo)
-                </td>
-                <td>
                     @Html.DisplayFor(modelItem => item.calificacionPlatillo)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.numeroVisitas)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.imagenPlatillo)
-                </td>
-                <td>
                     @Html.DisplayFor(modelItem => item.Pais.nombrePais)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.idPlatillo }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.idPlatillo }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.idPlatillo })
+                    @Ajax.ActionLink("Mostrar Detalles Extendidos", "DetallesParcial", "MaestroDetallePlatillo", new { idPlatillo = item.idPlatillo }, new AjaxOptions { HttpMethod = "GET", InsertionMode = InsertionMode.Replace, UpdateTargetId = "divDetallesPlatillo" })
                 </td>
             </tr>
         }
 
     </table>
 </div>
+
+<br /><br />
+
+<div id="divDetallesPlatillo" class="well"> </div>

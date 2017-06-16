@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Yakuza.Models.Tag>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br /><br /><br /><br /><br /><br /><br />
+
+<div class="well">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.descripcionTag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Platillo.nombrePlatillo)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.descripcionTag)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Platillo.nombrePlatillo)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.IdTag }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.IdTag }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.IdTag })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

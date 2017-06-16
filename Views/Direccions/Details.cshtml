@@ -1,0 +1,73 @@
+﻿@model Yakuza.Models.Direccion
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br /><br /><br /><br /><br /><br /><br />
+<div class="well">
+    <h4>Direccion</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.municipioDireccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.municipioDireccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.coloniaDireccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.coloniaDireccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.calleDireccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.calleDireccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numeroExterior)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numeroExterior)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numeroInterior)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numeroInterior)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.latitudDirecicon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.latitudDirecicon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.longitudDireccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.longitudDireccion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idDireccion }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

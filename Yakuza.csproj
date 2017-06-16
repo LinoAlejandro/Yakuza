@@ -210,13 +210,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoriaPlatilloesController.cs" />
     <Compile Include="Controllers\ConsumidorController.cs" />
+    <Compile Include="Controllers\DireccionsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MapaController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
+    <Compile Include="Controllers\MaestroDetallePlatilloController.cs" />
     <Compile Include="Controllers\PaisController.cs" />
     <Compile Include="Controllers\PlatilloesController.cs" />
+    <Compile Include="Controllers\PreciosController.cs" />
+    <Compile Include="Controllers\SucursalsController.cs" />
+    <Compile Include="Controllers\TagsController.cs" />
     <Compile Include="Controllers\TipoDeTarjetasController.cs" />
     <Compile Include="Controllers\UsuarioController.cs" />
     <Compile Include="Controllers\UsuariosUtilerias.cs" />
@@ -338,6 +344,7 @@
     <Content Include="Media\circle.png" />
     <Content Include="Media\Logo.png" />
     <Content Include="Media\BackGround.gif" />
+    <Content Include="Media\YakuzaApp.sql" />
     <Content Include="Models\Yakuza.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Yakuza.edmx</DependentUpon>
@@ -404,7 +411,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -469,6 +478,33 @@
     <Content Include="Views\Platilloes\Edit.cshtml" />
     <Content Include="Views\Platilloes\Index.cshtml" />
     <Content Include="Views\Menu\Show.cshtml" />
+    <Content Include="Views\Direccions\Create.cshtml" />
+    <Content Include="Views\Direccions\Delete.cshtml" />
+    <Content Include="Views\Direccions\Details.cshtml" />
+    <Content Include="Views\Direccions\Edit.cshtml" />
+    <Content Include="Views\Direccions\Index.cshtml" />
+    <Content Include="Views\Sucursals\Create.cshtml" />
+    <Content Include="Views\Sucursals\Delete.cshtml" />
+    <Content Include="Views\Sucursals\Details.cshtml" />
+    <Content Include="Views\Sucursals\Edit.cshtml" />
+    <Content Include="Views\Sucursals\Index.cshtml" />
+    <Content Include="Views\MaestroDetallePlatillo\Index.cshtml" />
+    <Content Include="Views\Tags\Create.cshtml" />
+    <Content Include="Views\Tags\Delete.cshtml" />
+    <Content Include="Views\Tags\Details.cshtml" />
+    <Content Include="Views\Tags\Edit.cshtml" />
+    <Content Include="Views\Tags\Index.cshtml" />
+    <Content Include="Views\Precios\Create.cshtml" />
+    <Content Include="Views\Precios\Delete.cshtml" />
+    <Content Include="Views\Precios\Details.cshtml" />
+    <Content Include="Views\Precios\Edit.cshtml" />
+    <Content Include="Views\Precios\Index.cshtml" />
+    <Content Include="Views\CategoriaPlatilloes\Create.cshtml" />
+    <Content Include="Views\CategoriaPlatilloes\Delete.cshtml" />
+    <Content Include="Views\CategoriaPlatilloes\Details.cshtml" />
+    <Content Include="Views\CategoriaPlatilloes\Edit.cshtml" />
+    <Content Include="Views\CategoriaPlatilloes\Index.cshtml" />
+    <Content Include="Views\MaestroDetallePlatillo\DetallesParcial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

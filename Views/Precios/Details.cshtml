@@ -1,0 +1,41 @@
+﻿@model Yakuza.Models.Precio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<br /><br /><br /><br /><br /><br />
+<div class="well">
+    <h4>Precio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionPrecio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionPrecio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidadPrecio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidadPrecio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Platillo.nombrePlatillo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Platillo.nombrePlatillo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idPrecio }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

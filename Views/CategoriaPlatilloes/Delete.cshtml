@@ -1,4 +1,4 @@
-﻿@model Yakuza.Models.Pais
+﻿@model Yakuza.Models.CategoriaPlatillo
 
 @{
     ViewBag.Title = "Delete";
@@ -6,18 +6,25 @@
 
 <h2>Delete</h2>
 
-<br /><br /><br /><br /><br /><br /><br />
-
 <h3>Are you sure you want to delete this?</h3>
-<div class="well">
+<div>
+    <h4>CategoriaPlatillo</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.nombrePais)
+            @Html.DisplayNameFor(model => model.nombreCategoriaPlatillo)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.nombrePais)
+            @Html.DisplayFor(model => model.nombreCategoriaPlatillo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcionCategoriaPlatillo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcionCategoriaPlatillo)
         </dd>
 
     </dl>

@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Yakuza.Models.Direccion>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+<br /><br /><br /><br /><br /><br /><br />
+
+<div class="well">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.municipioDireccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.coloniaDireccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.calleDireccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.numeroExterior)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.numeroInterior)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.latitudDirecicon)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.longitudDireccion)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.municipioDireccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.coloniaDireccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.calleDireccion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.numeroExterior)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.numeroInterior)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.latitudDirecicon)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.longitudDireccion)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.idDireccion }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.idDireccion }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.idDireccion })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

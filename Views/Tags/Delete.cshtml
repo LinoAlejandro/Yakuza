@@ -1,4 +1,4 @@
-﻿@model Yakuza.Models.Pais
+﻿@model Yakuza.Models.Tag
 
 @{
     ViewBag.Title = "Delete";
@@ -10,14 +10,23 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div class="well">
+    <h4>Tag</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.nombrePais)
+            @Html.DisplayNameFor(model => model.descripcionTag)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.nombrePais)
+            @Html.DisplayFor(model => model.descripcionTag)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Platillo.nombrePlatillo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Platillo.nombrePlatillo)
         </dd>
 
     </dl>
