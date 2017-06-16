@@ -344,6 +344,7 @@
     <Content Include="Media\circle.png" />
     <Content Include="Media\Logo.png" />
     <Content Include="Media\BackGround.gif" />
+    <Content Include="Media\script.sql" />
     <Content Include="Media\YakuzaApp.sql" />
     <Content Include="Models\Yakuza.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
