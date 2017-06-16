@@ -96,7 +96,7 @@ namespace Yakuza.Controllers
 
         // GET: Precios/Delete/5
         public ActionResult Delete(int? id)
-        {s
+        {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
